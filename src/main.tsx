@@ -15,13 +15,15 @@ import { Provider } from "react-redux";
 // redux
 // import GlobalStore from "./store/global/store.tsx";
 // import DemoStore from "./store/demo/store.tsx";
-import globalStore from "./store/store.tsx";
+// import globalStore from "./store/store.tsx";
+import { globalStore, persistor } from './store/store'; // 引入刚才创建的 store
 
 // import TestStore from "./store/test/store.tsx";
 // 添加路由
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import FloatButton from "antd/es/float-button/FloatButton";
 import { FloatButton } from 'antd';
+import { PersistGate } from "redux-persist/integration/react";
 
 const router = createBrowserRouter([
 	{
@@ -48,9 +50,11 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
 		<Provider store={globalStore}>
-			{/* <App /> */}
-			<RouterProvider router={router} />
-			<FloatButton.BackTop />
+			<PersistGate loading={null} persistor={persistor}>
+				{/* <App /> */}
+				<RouterProvider router={router} />
+				<FloatButton.BackTop />
+			</PersistGate>
 		</Provider>
 	</StrictMode>
 );
