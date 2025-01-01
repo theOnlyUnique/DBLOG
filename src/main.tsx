@@ -20,6 +20,8 @@ import globalStore from "./store/store.tsx";
 // import TestStore from "./store/test/store.tsx";
 // 添加路由
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import FloatButton from "antd/es/float-button/FloatButton";
+import { FloatButton } from 'antd';
 
 const router = createBrowserRouter([
 	{
@@ -48,6 +50,7 @@ createRoot(document.getElementById("root")!).render(
 		<Provider store={globalStore}>
 			{/* <App /> */}
 			<RouterProvider router={router} />
+			<FloatButton.BackTop />
 		</Provider>
 	</StrictMode>
 );

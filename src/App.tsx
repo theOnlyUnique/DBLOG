@@ -6,13 +6,16 @@ import "./App.css";
 // 添加组件库
 import { Button } from "antd";
 
+const AppStyle:React.CSSProperties = {
+	textAlign: 'center'
+}
 const App: FC = () => {
 	const [count, setCount] = useState<number>(0);
 	function handleClick() {
 		setCount(count + 1);
 	}
 	return (
-		<>
+		<div style={AppStyle}>
 			<div>岁月诗史</div>
 			<p className="read-the-docs">劉啓東's BLOG (⊙o⊙)？</p>
 			<div>
@@ -24,7 +27,73 @@ const App: FC = () => {
 			<div>
 				<Link to="/"> 点我跳转到主页</Link>
 			</div>
-		</>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+			<div>岁月诗史</div>
+		</div>
 	);
 };
 
