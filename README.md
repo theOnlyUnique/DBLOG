@@ -1,3 +1,7 @@
 node version 18.18.1
 
-技术栈： React18 、 Redux toolkit 、Redux Router 、
+技术栈： React18 、 Redux toolkit 、Redux Router 、Redux Persist、Ant Design
+
+
+快速上手文档(初期看):https://ant-design.antgroup.com/docs/react/getting-started-cn
+样式库文档:https://ant-design.antgroup.com/components/overview-cn?locale=zh-CN
