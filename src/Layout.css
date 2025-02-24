@@ -1,0 +1,28 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .header, .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* 响应式设计优化 */
+  @media (max-width: 768px) {
+    .content {
+      max-width: 100%;
+      margin: 0;
+      padding: 10px;
+    }
+  }
