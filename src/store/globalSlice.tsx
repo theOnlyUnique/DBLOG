@@ -7,6 +7,7 @@ const globalSlice = createSlice({
 		isLogin: false,
 		isTeacher: false,
 		clickNums: 0,
+		articleId: -1
 	},
 	reducers: {
 		setLogin(state, action) {
@@ -21,7 +22,10 @@ const globalSlice = createSlice({
 		reduce(state) {
 			state.clickNums--;
 		},
+		setArticleId(state, action) {
+			state.articleId = action.payload
+		}
 	},
 });
-export const { setLogin, setTeacher, addNums, reduce } = globalSlice.actions;
+export const { setLogin, setTeacher, addNums, reduce,setArticleId } = globalSlice.actions;
 export default globalSlice.reducer;
