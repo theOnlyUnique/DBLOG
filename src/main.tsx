@@ -10,6 +10,7 @@ import Home from "./routes/Home.tsx";
 import FooterCopyright from "./routes/FooterCopyRight.tsx";
 import Article from "./routes/markdown/article.tsx"
 import "./index.css";
+// import "./Layout.css"
 import 'prismjs/themes/prism.css'; // 你可以选择其他主题，如 'prism-okaidia.css', 'prism-dark.css' 等
 // 注入redux缓存
 import { Provider } from "react-redux";
@@ -83,20 +84,42 @@ const articles = [
 
 const shits = [
 	{
-		'title': '毒液',
+		'id': 1,
+		'title': '永雏塔菲',
 		'avatar': 'http://www.qidong.tech/yctf.jpg',
-		'text': '我是毒液,我是毒液,我是最强毒液。',
+		'text': 'Bilibili虚拟偶像,英文名为Taffy,故称塔菲.二次元浓度++...',
 	},
 	{
-		'title': '毒液',
-		'avatar': 'http://www.qidong.tech/yctf.jpg',
-		'text': '我是毒液,我是毒液,我是最强毒液。',
+		'id': 2,
+		'title': '我是奶龙',
+		'avatar': 'http://www.qidong.tech:5173/resource/undefined.jpg',
+		'text': '诞生于深圳的奶龙,以其呆萌的形象与魔性的鬼畜,迅速走红...',
 	},
 	{
-		'title': '毒液',
-		'avatar': 'http://www.qidong.tech/yctf.jpg',
-		'text': '我是毒液,我是毒液,我是最强毒液。',
+		'id': 3,
+		'title': '尖尖哇嘎乃',
+		'avatar': 'http://www.qidong.tech:5173/resource/xiaoba.png',
+		'text': '日漫吉伊卡娃中的台词,意为什么都不知道啊,配合小八不太聪明的样子迅速走红...',
 	},
+	{
+		'id': 4,
+		'title': '奶龙',
+		'avatar': 'http://www.qidong.tech/yctf.jpg',
+		'text': '我是奶龙,我是奶龙,我是最强奶龙。',
+	},
+	{
+		'id': 5,
+		'title': '奶龙',
+		'avatar': 'http://www.qidong.tech/yctf.jpg',
+		'text': '我是奶龙,我是奶龙,我是最强奶龙。',
+	},
+	{
+		'id': 6,
+		'title': '奶龙',
+		'avatar': 'http://www.qidong.tech/yctf.jpg',
+		'text': '我是奶龙,我是奶龙,我是最强奶龙。',
+	},
+	
 	
 
 ] 
@@ -158,7 +181,7 @@ createRoot(document.getElementById("root")!).render(
 						<header className="header" style={{}}>
 							<TopMenu></TopMenu>
 						</header>
-						<main  className="content" style={{minHeight: "90vh",maxHeight: "90vh",overflow:"auto"}}>
+						<main  className="content" style={{minHeight: "90vh",maxHeight: "90vh",overflow:"auto",backgroundColor:'darkgray'}}>
 								{/* <App /> */}
 								{/* <RouterProvider router={router} /> */}
 								<Routes>

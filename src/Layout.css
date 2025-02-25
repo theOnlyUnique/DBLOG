@@ -16,6 +16,7 @@
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+    background-color: darkgray;
   }
   
   /* 响应式设计优化 */
@@ -24,5 +25,6 @@
       max-width: 100%;
       margin: 0;
       padding: 10px;
+      background-color: darkgray;
     }
   }
