@@ -26,49 +26,49 @@ export default function DefaultTemplate() {
                 <Card hoverable style={{ borderRadius: 'initial'}}>
                     <h1>基本情况</h1>
                     <p>
-                        <strong>曾用网名: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        <strong>曾用网名: &nbsp;&nbsp;</strong>
                         <span>云深不知处;</span>
                     </p>
                     <p>
-                        <strong>励己名言: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        <strong>励己名言: &nbsp;&nbsp;</strong>
                         <span> <a href="https://baijiahao.baidu.com/s?id=1629150673782461819&wfr=spider&for=pc" target="_blank">我亦是我,我将无我</a>                            ;</span>
                     </p>
                     <p>
-                        <strong>联系方式: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        <strong>联系方式: &nbsp;&nbsp;</strong>
                         <span>
                             扣扣:<a href="mailto:2548818216@qq.com">2548818216@qq.com</a>;
                             WX:<a href="weixin://dl/chat?username=_qidong2003">_qidong2003</a>;
                         </span>
                     </p>
                     <p>
-                        <strong>自我介绍: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        <strong>自我介绍: &nbsp;&nbsp;</strong>
                         <span>来自十八线乡村,非标准农村做题家;</span>
                     </p>
                     <p>
-                        <strong>个人爱好: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        <strong>个人爱好: &nbsp;&nbsp;</strong>
                         <span>独立思考;参阅古文;经济金融;网页开发;</span>
                     </p>
                 </Card>
                 <Card hoverable style={{ borderRadius:'initial'}}>
                     <h1>个人经历</h1>
                     <p>
-                        <strong>开发经验: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        <strong>开发经验: &nbsp;&nbsp;</strong>
                         <span>2.3年;共计负责与参与大小项目11项;</span>
                     </p>
                     <p>
-                        <strong>技术框架: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
-                        <span>Vue;React;WebPack;Vite;TypeScript;Naive-UI;Ant-Design;Electron;WebSocket;Nginx;</span>
+                        <strong>技术框架: &nbsp;&nbsp;</strong>
+                        <span>Vue; React; WebPack; Vite; TypeScript; Naive UI; Ant Design; Electron; WebSocket; Nginx;</span>
                     </p>
                     <p>
-                        <strong>涉及场景: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        <strong>涉及场景: &nbsp;&nbsp;</strong>
                         <span>Web界面;移动端APP;微信小程序;快应用;</span>
                     </p>
                     <p>
-                        <strong>实习经历: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        <strong>实习经历: &nbsp;&nbsp;</strong>
                         <span>中和农信农业集团有限公司(前端开发实习生);</span>
                     </p>
                     <p>
-                        <strong>早期博客: &nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        <strong>早期博客: &nbsp;&nbsp;</strong>
                         <span><a href="https://blog.csdn.net/m0_72678953?type=blog" target="_blank">JSU曾是此间年少&nbsp;的博客</a></span>
                     </p>
                 </Card>
