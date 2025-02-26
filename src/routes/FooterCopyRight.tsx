@@ -82,8 +82,8 @@ const FooterCopyright = () => {
   ].filter(Boolean).join(' ');
   return (
     <div className="copyright">
-      <p>© 2024 www.qidong.tech &nbsp;
-        20240821
+      <p>© 2024-2025 www.qidong.tech &nbsp;
+        {/* 20240821 */}
         <span>本站已运行：{timeComponents}</span>
       </p>
       

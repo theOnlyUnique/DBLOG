@@ -15,7 +15,7 @@ const ArticleCard = ({ id,title, content }) => {
     router('/' + 'article')
   }
   return (
-    <div style={{ border: '1px solid #ddd', padding: '15px', marginBottom: '20px' }}>
+    <div style={{ border: '1px solid #ddd', padding: '15px', marginBottom: '20px' ,backgroundColor:'white'}}>
       <h2>{title}</h2>
       <ReactMarkdown rehypePlugins={[rehypePrism]} >{content}</ReactMarkdown>
       <div style={{display:'flex',justifyContent: 'center'}}>

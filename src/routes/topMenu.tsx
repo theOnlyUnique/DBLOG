@@ -25,7 +25,7 @@ const TopMenu: React.FC = () => {
         },
         {
             key: 'concat-me',
-            label: '联系作者',
+            label: '作者详情',
         },
         {
             key: 'home',
