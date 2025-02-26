@@ -1,9 +1,14 @@
 // TopMenu.tsx
 import React, { useState } from 'react';
-import { Menu, Row } from 'antd';
+import { Button, Dropdown, Menu, Row } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { useWindowSize } from '../utils/windowContext/win';
+import { DownOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 const TopMenu: React.FC = () => {
     const [current, setCurrent] = useState('home');
+    const { width, height,isHorizontal } = useWindowSize();
+
+    console.log("查看全屏宽高：",width,height,isHorizontal)
     const items = [
         
         {
@@ -33,25 +38,39 @@ const TopMenu: React.FC = () => {
         console.log('打印key',e.key)
         route("/" + e.key)
     };
-
+    const menus = (
+        <Menu
+          selectedKeys={[current]}
+          mode="vertical"
+          onClick={onClick}
+          items={items}
+        />
+      );
     return (
         <Row>
             <div style={{ display: 'flex',justifyContent: 'space-between',width: '100%'}}>
                 <div style={{ display: 'flex', alignItems: 'center'}}>
-                    <img style={{height: '50px', width: '50px',marginRight:'10px'}} src="/yctf.jpg" alt="LOGO加载失败了" />
+                    <img style={{height: '2rem', width: '2rem',marginRight:'5px'}} src="/yctf.jpg" alt="LOGO加载失败了" />
                         
                     <div style={{ zoom: "60%"}}>
-                        <p style={{fontSize:'50px',textAlign: 'justify',margin: 0,fontWeight: 'lighter'}}>DBLOG<span style={{display: 'inline-block'}}></span></p>
-                        <p style={{fontSize:'20px',textAlign: 'justify',margin: 0,fontWeight: 'bolder'}}>雏草姬的温暖港湾<span style={{display: 'inline-block',width: '100%'}}></span></p>
+                        <p style={{fontSize:'2rem',textAlign: 'justify',margin: 0,fontWeight: 'lighter'}}>DBLOG<span style={{display: 'inline-block'}}></span></p>
+                        <p style={{fontSize:'1rem',textAlign: 'justify',margin: 0,fontWeight: 'bolder'}}>雏草姬的温暖港湾<span style={{display: 'inline-block',width: '0%'}}></span></p>
                     </div>
                 </div>
-                <Menu
+                {isHorizontal ? (
+                    <Menu
                     onClick={onClick}
                     selectedKeys={[current]}
                     mode="horizontal"
                     items={items}
-                    disabledOverflow
-                />
+                    />
+                ) : (
+                    <Dropdown overlay={menus} trigger={['click']}>
+                    <Button>
+                       <MenuUnfoldOutlined />
+                    </Button>
+                    </Dropdown>
+                )}
             </div>
         </Row>
     );

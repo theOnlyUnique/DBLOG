@@ -104,6 +104,7 @@ import AboutAuthor from "./routes/normal/AboutAuthor.tsx"
 import AboutProject from "./routes/normal/AboutProject.tsx"
 import ConcatMe from "./routes/normal/ConcatMe.tsx"
 import FindShit from "./routes/normal/FindShit.tsx"
+import { WindowSizeProvider } from "./utils/windowContext/win.tsx";
 const router = ([
 	{
 		path: "/",
@@ -154,30 +155,30 @@ createRoot(document.getElementById("root")!).render(
 		<BrowserRouter >
 			<Provider store={globalStore}>
 				<PersistGate loading={null} persistor={persistor}>
-					<div className="layout">
-						<header className="header" style={{}}>
-							<TopMenu></TopMenu>
-						</header>
-						<main  className="content" style={{minHeight: "90vh",maxHeight: "90vh",overflow:"auto"}}>
-								{/* <App /> */}
-								{/* <RouterProvider router={router} /> */}
-								<Routes>
-									<Route path="/" element={<Home articles={articles} />} />
-									<Route path="/home" element={<Home articles={articles} />} />
-									<Route path="/article" element={<Article />} />
-									<Route path="/find-shit" element={<FindShit celebrityList={shits} />} />
-									<Route path="/about-project" element={<AboutProject />} />
-									<Route path="/about-author" element={<AboutAuthor />} />
-									<Route path="/concat-me" element={<ConcatMe />} />
-								</Routes>
-								<FloatButton.BackTop />
-						</main>
-						<footer className="footer" style={{minHeight: "10vh"}}>
-							<FooterCopyright></FooterCopyright>
-						</footer>
-					</div>
-					
-					
+					<WindowSizeProvider>
+						<div className="layout">
+							<header className="header" style={{}}>
+								<TopMenu></TopMenu>
+							</header>
+							<main  className="content" style={{minHeight: "90vh",maxHeight: "90vh",overflow:"auto"}}>
+									{/* <App /> */}
+									{/* <RouterProvider router={router} /> */}
+									<Routes>
+										<Route path="/" element={<Home articles={articles} />} />
+										<Route path="/home" element={<Home articles={articles} />} />
+										<Route path="/article" element={<Article />} />
+										<Route path="/find-shit" element={<FindShit celebrityList={shits} />} />
+										<Route path="/about-project" element={<AboutProject />} />
+										<Route path="/about-author" element={<AboutAuthor />} />
+										<Route path="/concat-me" element={<ConcatMe />} />
+									</Routes>
+									<FloatButton.BackTop />
+							</main>
+							<footer className="footer" style={{minHeight: "10vh"}}>
+								<FooterCopyright></FooterCopyright>
+							</footer>
+						</div>
+					</WindowSizeProvider>
 				</PersistGate>
 			</Provider>
 		</BrowserRouter>
