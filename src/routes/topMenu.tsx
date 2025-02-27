@@ -6,9 +6,9 @@ import { useWindowSize } from '../utils/windowContext/win';
 import { DownOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 const TopMenu: React.FC = () => {
     const [current, setCurrent] = useState('home');
-    const { width, height,isHorizontal } = useWindowSize();
+    const { size,isHorizontal } = useWindowSize();
 
-    console.log("查看全屏宽高：",width,height,isHorizontal)
+    console.log("查看全屏宽高：",size.width,size.height,isHorizontal)
     const items = [
         
         {
@@ -46,17 +46,14 @@ const TopMenu: React.FC = () => {
           items={items}
         />
       );
-    const heandleClickIcon = () => {
-        if (window.location.href != window.location.origin + '/') {
-            // console.log(window.location.href , window.location.origin )
-            window.location.href = window.location.origin;
-        }
-        
+    const handleClickLogo = () => {
+        // console.log(window.location.href ,window.location.href)
+        if (window.location.href != window.location.origin + '/')  window.location.href = window.location.origin
     }
     return (
         <Row>
             <div style={{ display: 'flex',justifyContent: 'space-between',width: '100%'}}>
-                <div style={{ display: 'flex', alignItems: 'center',cursor:'pointer'}} onClick={heandleClickIcon}>
+                <div style={{ display: 'flex', alignItems: 'center',cursor:"pointer"}} onClick={handleClickLogo}>
                     <img style={{height: '2rem', width: '2rem',marginRight:'5px'}} src="/yctf.jpg" alt="LOGO加载失败了" />
                         
                     <div style={{ zoom: "60%"}}>
