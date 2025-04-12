@@ -7,6 +7,7 @@ import rehypePrism from 'rehype-prism-plus';
 import { useDispatch } from 'react-redux';
 import { setArticleId } from '../store/globalSlice';
 
+// 每一篇文章
 const ArticleCard = ({ id,title, content }) => {
   const [uuid] = useState(() => `article-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`);
   // 标记是否已经展开
@@ -27,15 +28,35 @@ const ArticleCard = ({ id,title, content }) => {
   }
   return (
     <div style={{ border: '1px solid #ddd', padding: '15px', marginBottom: '20px' ,backgroundColor:'white',overflow:'hidden'}}>
+      <div style={{ overflow: 'hidden'}}>
       <h2>{title}</h2>
       <div style={{ maxHeight: '30vh'}} id={uuid}>
-        <ReactMarkdown rehypePlugins={[rehypePrism]} >{content}</ReactMarkdown>
+        <div style={{ paddingBottom: '20px' }}>
+          <ReactMarkdown rehypePlugins={[rehypePrism]} >{content}</ReactMarkdown>
+        </div>
       </div>
       <div style={{display:'flex',justifyContent: 'center'}}>
         <Button onClick={getArticleDetail}>点击阅读</Button>
         <Button style={{ marginLeft: '10px'}} onClick={handleLunch}>
           {show ? '收起阅读': '展开阅读'}
         </Button>
+      </div>
+      {/* 固定在右下角的收起按钮 */}
+      {show && (
+        <Button 
+          type="primary" 
+          style={{
+            position: 'fixed',
+            right: '20px',
+            bottom: '20px',
+            zIndex: 1000,
+            boxShadow: '0 2px 10px rgba(0, 0, 0, 0.2)'
+          }}
+          onClick={handleLunch}
+        >
+          收起文章
+        </Button>
+      )}
       </div>
     </div>
   );

@@ -53,7 +53,7 @@ export default function DefaultTemplate() {
                     <h1>个人经历</h1>
                     <p>
                         <strong>开发经验: &nbsp;&nbsp;</strong>
-                        <span>2.3年;共计负责与参与大小项目11项;</span>
+                        <span>2.5年;共计负责与参与大小项目12项;</span>
                     </p>
                     <p>
                         <strong>技术框架: &nbsp;&nbsp;</strong>
