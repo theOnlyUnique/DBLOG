@@ -1,4 +1,4 @@
-import { Card ,Tabs,Image, TabsProps} from "antd"
+import { Card ,Tabs,Image, TabsProps,Alert} from "antd"
 export default function DefaultTemplate() {
     const items: TabsProps['items'] = [
         {
@@ -78,6 +78,7 @@ export default function DefaultTemplate() {
                     <h1>加我好友</h1>
                     <Tabs defaultActiveKey="1" centered items={items}> </Tabs>
                 </Card>
+                <Alert  message="嗯哼？你又来视奸我啦(￣ω￣;)" type="info" ></Alert>
             </div>
         </div>
     </>)

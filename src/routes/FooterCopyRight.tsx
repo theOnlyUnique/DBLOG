@@ -78,7 +78,7 @@ const FooterCopyright = () => {
     hours > 0 ? `${hours}小时` : '',
     minutes > 0 ? `${minutes}分钟` : '',
     seconds > 0 ? `${seconds}秒` : '',
-    ms > 0 ? `${ms}毫秒` : ''
+    ms > 0 ? `${String(ms).padStart(3,"0")}毫秒` : ''
   ].filter(Boolean).join(' ');
   return (
     <div className="copyright">
