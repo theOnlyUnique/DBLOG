@@ -67,7 +67,7 @@ const ArticleList = ({ articles }) => {
   // const showScrollButton = scrollRef.current ? scrollRef.current.scrollTop > 0 : false;
   return (
     <div >
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }} >
+      <div style={{ margin: '0 auto', padding: '20px' }} >
         {articles.map(article => (
           <ArticleCard key={article.id} {...article} />
         ))}

@@ -1,6 +1,6 @@
 // TopMenu.tsx
 import React, { useState } from 'react';
-import { Button, Dropdown, Menu, Row } from 'antd';
+import { Button, Dropdown, Menu, Row,Avatar, Space } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { useWindowSize } from '../utils/windowContext/win';
 import { DownOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
@@ -10,7 +10,6 @@ const TopMenu: React.FC = () => {
 
     console.log("查看全屏宽高：",size.width,size.height,isHorizontal)
     const items = [
-        
         {
             key: 'find-shit',
             label: '史海淘金',
@@ -20,8 +19,12 @@ const TopMenu: React.FC = () => {
             label: '关于项目',
         },
         {
-            key: 'about-author',
-            label: '关于我',
+            key: 'front-source',
+            label: '前端资源',
+        },
+        {
+            key: 'friend-chain',
+            label: '网站友链',
         },
         {
             key: 'concat-me',
@@ -54,7 +57,7 @@ const TopMenu: React.FC = () => {
         <Row>
             <div style={{ display: 'flex',justifyContent: 'space-between',width: '100%'}}>
                 <div style={{ display: 'flex', alignItems: 'center',cursor:"pointer"}} onClick={handleClickLogo}>
-                    <img style={{height: '2rem', width: '2rem',marginRight:'5px'}} src="/yctf.jpg" alt="LOGO加载失败了" />
+                    <img style={{height: '2rem', width: '2rem',marginRight:'5px'}} src="/img/yctf.jpg" alt="LOGO加载失败了" />
                         
                     <div style={{ zoom: "60%"}}>
                         <p style={{fontSize:'2rem',textAlign: 'justify',margin: 0,fontWeight: 'lighter'}}>DBLOG<span style={{display: 'inline-block',width: '0%'}}></span></p>
@@ -62,17 +65,20 @@ const TopMenu: React.FC = () => {
                     </div>
                 </div>
                 {isHorizontal ? (
-                    <Menu
-                    onClick={onClick}
-                    selectedKeys={[current]}
-                    mode="horizontal"
-                    items={items}
-                    />
+                    <div style={{ display:'flex'}}>
+                        <Menu
+                        onClick={onClick}
+                        selectedKeys={[current]}
+                        mode="horizontal"
+                        items={items}
+                        />
+                        <Avatar src={"/img/ht.gif"} size='large'></Avatar>
+                    </div>
                 ) : (
                     <Dropdown overlay={menus} trigger={['click']}>
-                    <Button>
-                       <MenuUnfoldOutlined />
-                    </Button>
+                        <Button>
+                            <MenuUnfoldOutlined />
+                        </Button>
                     </Dropdown>
                 )}
             </div>

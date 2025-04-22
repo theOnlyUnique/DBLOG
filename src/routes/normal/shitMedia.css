@@ -39,3 +39,22 @@
     font-size: 24px;
   }
 }
+
+/* src/components/MyList.module.css */
+/* .customList .ant-list-item-meta-avatar {
+  margin-right: 16px;
+} */
+/* .ant-list-item-meta {
+  display: flex;
+  align-items: center;
+} */
+
+:where(.css-dev-only-do-not-override-240cud).ant-list .ant-list-item .ant-list-item-meta {
+  
+  display: flex;
+  align-items: center; /* 垂直居中 */
+}
+:where(.css-dev-only-do-not-override-240cud).ant-list .ant-list-item .ant-list-item-meta .ant-list-item-meta-avatar {
+    margin: 10px;
+    zoom: 130%;
+}
