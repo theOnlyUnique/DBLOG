@@ -4,6 +4,10 @@
     padding: 20px;
     text-align: center;
     margin-top: auto; /* 确保始终在底部 */
+    p.filing  {
+      display: flex;
+      justify-content: center;
+    }
   }
   
   .copyright p {

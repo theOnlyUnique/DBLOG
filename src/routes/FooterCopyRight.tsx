@@ -1,6 +1,7 @@
 // components/FooterCopyright.js
 // import React from 'react';
 import { useEffect, useState } from 'react';
+import { Image } from 'antd';
 import './FooterCopyright.css';
 
 const FooterCopyright = () => {
@@ -72,14 +73,15 @@ const FooterCopyright = () => {
 
   // 动态构建显示字符串
   const timeComponents = [
-    years > 0 ? `${years}年` : '',
-    months > 0 ? `${months}个月` : '',
-    days > 0 ? `${days}天` : '',
-    hours > 0 ? `${hours}小时` : '',
-    minutes > 0 ? `${minutes}分钟` : '',
-    seconds > 0 ? `${seconds}秒` : '',
-    ms > 0 ? `${String(ms).padStart(3,"0")}毫秒` : ''
+    years> 0 ? `${String(years).padStart(2,"0")}年`: '',
+    months> 0 ?  `${String(months).padStart(2,"0")}个月`: '',
+    days> 0 ? `${String(days).padStart(2,"0")}天`: '',
+    hours> 0 ? `${String(hours).padStart(2,"0")}小时`: '',
+    minutes> 0 ? `${String(minutes).padStart(2,"0")}分钟`: '',
+    seconds> 0 ? `${String(seconds).padStart(2,"0")}秒`: '',
+    `${String(ms).padStart(3,"0")}毫秒` 
   ].filter(Boolean).join(' ');
+  
   return (
     <div className="copyright">
       <p>© 2024-2025 www.qidong.tech &nbsp;
@@ -87,17 +89,18 @@ const FooterCopyright = () => {
         <span>本站已运行：{timeComponents}</span>
       </p>
       
-      <p>
-        <strong>ICP备案信息：</strong>
-        <span>湘ICP备2024098725号</span>
-        <a href="http://www.miit.gov.cn" target="_blank" rel="noopener noreferrer">
-          （公安机关备案号：湘ICP备2024098725号）
-        </a>
-      </p>
-      <p>
+      <p className='filing'>
+        {/* <strong>ICP备案信息：</strong> */}
         <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">
-          备案查询：www.miit.gov.cn
-        </a>
+            湘ICP备2024098725号
+        </a> &nbsp;&nbsp;
+        <Image 
+          src={"/img/ba.png"} 
+          width={15} // 按实际尺寸调整
+          preview={false} 
+          alt="公安备案标识"
+        />
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002006655" rel="noreferrer" target="_blank">粤公网安备44030002006655号</a>
       </p>
     </div>
   );
